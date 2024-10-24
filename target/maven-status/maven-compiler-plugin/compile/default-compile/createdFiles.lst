@@ -1,0 +1,10 @@
+com\aviroop\orderservice\config\WebClientConfig.class
+com\aviroop\orderservice\repository\OrderRepository.class
+com\aviroop\orderservice\dto\OrderRequest.class
+com\aviroop\orderservice\service\OrderService.class
+com\aviroop\orderservice\dto\ProductResponse$ProductResponseBuilder.class
+com\aviroop\orderservice\controller\OrderController.class
+com\aviroop\orderservice\model\Order.class
+com\aviroop\orderservice\OrderServiceApplication.class
+com\aviroop\orderservice\dto\ProductResponse.class
+com\aviroop\orderservice\model\Order$OrderBuilder.class
