@@ -1,4 +1,4 @@
-package com.aviroop.orderservice.repository;
+package com.aviroop.orderservice.repository.order;
 
 import com.aviroop.orderservice.model.Order;
 import org.springframework.data.mongodb.repository.MongoRepository;

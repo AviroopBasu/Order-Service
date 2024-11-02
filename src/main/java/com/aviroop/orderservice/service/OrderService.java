@@ -4,10 +4,9 @@ import com.aviroop.orderservice.dto.OrderRequest;
 import com.aviroop.orderservice.dto.ProductResponse;
 import com.aviroop.orderservice.dto.UpdateProductStockRequest;
 import com.aviroop.orderservice.model.Order;
-import com.aviroop.orderservice.repository.OrderRepository;
+import com.aviroop.orderservice.repository.order.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.common.protocol.types.Field;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -15,9 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
-
-import java.net.http.HttpResponse;
 //import org.springframework.web.reactive.function.client.WebClient;
 
 
@@ -91,6 +87,7 @@ public class OrderService {
                 Void.class,
                 orderRequest.getProductId()
         );
+
         //Handling Response
         if (HttpStatus.OK == responseEntity.getStatusCode()) {
             log.info("Product Stock has been updated successfully");
